@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main  # Change to your default branch if needed
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.11.0'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Run Linting
+        run: yarn run lint  # Ensure you have a lint script in package.json
+
+      - name: Run Prettier
+        run: yarn run format  # Ensure you have a format script in package.json
+
+      - name: Run Tests
+        run: yarn test -- --watchAll=false
+
+      - name: Build
+        run: yarn run build
+
+      - name: Deploy to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}  # Use GitHub Secrets for security
+        run: |
+          yarn i -g vercel
+          vercel --prod --confirm --token $VERCEL_TOKEN --scope your-scope
