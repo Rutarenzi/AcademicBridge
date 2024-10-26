@@ -1,6 +1,8 @@
 version: 2.1
+
 orbs:
   coveralls: coveralls/coveralls@1.0.6
+
 jobs:
   build:
     docker:
@@ -8,17 +10,37 @@ jobs:
     steps:
       - checkout
       - run: 
-          name: 'install dependences'
-          command: yarn install -f
+          name: 'Install Dependencies'
+          command: yarn install 
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
       - run:
-          name: 'run test'
-          command: npm test
+          name: 'Run Tests'
+          command: yarn test
       - coveralls/upload
+
+  deploy:
+    docker:
+      - image: cimg/node:20.11.0
+    steps:
+      - checkout
+      - run:
+          name: 'Deploy to Production'
+          command: |
+            yarn global add vercel
+            vercel --prod --confirm --token $VERCEL_TOKEN 
+
 workflows:
-  AcademicBridge_workflow:
-    jobs: 
-      - build
+  version: 2
+  build_and_deploy:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+                - main  # Runs on pushes to the main branch
+      - deploy:
+          requires:
+            - build  # Deploys after a successful build

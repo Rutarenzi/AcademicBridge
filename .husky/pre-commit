@@ -1,1 +1,1 @@
-yarn run coverage
+npx  lint-staged
