@@ -3,7 +3,7 @@ name: ACADEMICBRIDGE
 on:
   pull_request:
     branches:
-      - main  # Trigger on pull requests targeting the main branch
+      - main # Trigger on pull requests targeting the main branch
 
 jobs:
   lint_and_test:
@@ -22,7 +22,7 @@ jobs:
         run: yarn install
 
       - name: Run Linting
-        run: yarn run lint  # Ensure you have a lint script in package.json
+        run: yarn run lint # Ensure you have a lint script in package.json
 
       - name: Run Tests
         run: yarn test -- --watchAll=false
