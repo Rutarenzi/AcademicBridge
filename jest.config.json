@@ -3,5 +3,8 @@
     "collectCoverageFrom": ["src/**/*.{js,jsx}"],
     "coverageDirectory": "coverage",
     "testEnvironment": "jsdom",
-    "setupFilesAfterEnv": ["<rootDir>/src/test/jest.setup.js"]
+    "setupFilesAfterEnv": ["<rootDir>/src/test/jest.setup.js"],
+    "moduleNameMapper": {
+    "\\.(jpg|jpeg|png|gif|svg)$": "<rootDir>/src/test/__mocks__/fileMock.js"
+  }
   }
