@@ -7,6 +7,7 @@ import { CiCirclePlus } from 'react-icons/ci';
 import { CiGrid41 } from 'react-icons/ci';
 import { CiGrid2H } from 'react-icons/ci';
 import InsideNav from '../components/InsideNav';
+import CardGrid from '../partials/CardContainer';
 
 const Dashboard = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -97,7 +98,7 @@ const Dashboard = () => {
 							{Users.slice(0, 3).map((User, index) => (
 								<img
 									key={index}
-									className="inline-block h-8 w-8 rounded-full ring-2 ring-white"
+									className="inline-block h-8 w-8 rounded-full ring-2 ring-white object-cover"
 									src={User.photo}
 									alt=""
 								/>
@@ -142,6 +143,7 @@ const Dashboard = () => {
 				</div>
 			</div>
 			<InsideNav />
+			<CardGrid />
 		</div>
 	);
 };

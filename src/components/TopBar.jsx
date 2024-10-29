@@ -17,10 +17,8 @@ const TopNavbar = ({ toggleSideBar, sideBarStatus }) => {
 				</button>
 			</div>
 
-			{/* Search bar */}
 			<div className="flex-grow mx-6 max-w-md  p-2 rounded-lg">
 				{' '}
-				{/* Increased max width */}
 				<div className="flex items-center  relative  ">
 					<input
 						type="text"
@@ -28,11 +26,8 @@ const TopNavbar = ({ toggleSideBar, sideBarStatus }) => {
 						className="w-full p-2 pr-11 rounded-lg focus:outline-none focus:ring-0 bg-gray-100" // Ensure input matches background
 					/>
 					<IoSearch className="right-3 text-2xl absolute text-gray-400" />{' '}
-					{/* Search icon on the right */}
 				</div>
 			</div>
-
-			{/* Right-side icons */}
 			<div className="flex relative items-center space-x-4">
 				<ThemeToggle />
 				<button aria-label="Notifications">
