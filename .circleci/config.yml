@@ -9,9 +9,9 @@ jobs:
       - image: cimg/node:20.11.0
     steps:
       - checkout
-      - run: 
+      - run:
           name: 'Install Dependencies'
-          command: yarn install 
+          command: yarn install
       - save_cache:
           paths:
             - node_modules
@@ -30,7 +30,7 @@ jobs:
           name: 'Deploy to Production'
           command: |
             yarn global add vercel
-            vercel --prod --confirm --token $VERCEL_TOKEN 
+            vercel --prod --confirm --token $VERCEL_TOKEN
 
 workflows:
   version: 2
@@ -40,7 +40,7 @@ workflows:
           filters:
             branches:
               only:
-                - main  # Runs on pushes to the main branch
+                - main # Runs on pushes to the main branch
       - deploy:
           requires:
-            - build  # Deploys after a successful build
+            - build # Deploys after a successful build
