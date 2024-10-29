@@ -5,7 +5,6 @@ const InsideNav = () => {
 	const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 	const tasks = [
 		{ name: 'All Tasks', count: 25 },
-		{ name: 'To Do', count: 5 },
 		{ name: 'In Progress', count: 3 },
 		{ name: 'Completed', count: 10 },
 	];
@@ -77,10 +76,11 @@ const InsideNav = () => {
 			<div className="flex space-x-2">
 				<button className=" border-gray-200 px-7 py-2  rounded-md flex items-center border">
 					<IoFilterOutline />{' '}
-					<span className="ml-2 hidden md:block">filter & Sort</span>
+					<span className="ml-2 hidden md:block">Filter & Sort</span>
 				</button>
 				<button className=" border-gray-200 px-7 py-2 rounded-md flex items-center border">
-					<span>+</span> <span className="ml-2 hidden md:block">Add Task</span>
+					<span className="text-xl">+</span>{' '}
+					<span className="ml-2 hidden md:block">New Task</span>
 				</button>
 			</div>
 		</nav>

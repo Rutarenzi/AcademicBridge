@@ -43,12 +43,18 @@ const Users = [
 		photo: Photo,
 	},
 	{
-		name: 'Axcel muhire',
+		name: 'Axcel Renzi',
 		photo: Photo,
 	},
 	{
-		name: 'Axcel muhire',
+		name: 'Axcel Ruta',
 		photo: Photo,
 	},
 ];
-export { links, Users };
+const cards = Array.from({ length: 20 }, (_, index) => ({
+	id: index + 1,
+	status: index % 2 ? 'true' : 'false',
+	image: `${Photo}`,
+}));
+
+export { links, Users, cards };
