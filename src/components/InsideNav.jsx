@@ -74,12 +74,13 @@ const InsideNav = () => {
 					))}
 				</div>
 			</div>
-			<div className="flex space-x-4">
-				<button className=" border-gray-200 px-7 py-2 rounded-md flex items-center border">
-					<IoFilterOutline /> <span className="ml-2">filter & Sort</span>
+			<div className="flex space-x-2">
+				<button className=" border-gray-200 px-7 py-2  rounded-md flex items-center border">
+					<IoFilterOutline />{' '}
+					<span className="ml-2 hidden md:block">filter & Sort</span>
 				</button>
 				<button className=" border-gray-200 px-7 py-2 rounded-md flex items-center border">
-					<span>+</span> <span className="ml-2">Add Task</span>
+					<span>+</span> <span className="ml-2 hidden md:block">Add Task</span>
 				</button>
 			</div>
 		</nav>

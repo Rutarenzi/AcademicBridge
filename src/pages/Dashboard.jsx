@@ -77,7 +77,7 @@ const Dashboard = () => {
 										to="/settings"
 										onClick={() => setIsOpen(false)}
 									>
-										Settings
+										Admin
 									</Link>
 								</li>
 								<li>
@@ -86,7 +86,7 @@ const Dashboard = () => {
 										to="/signin"
 										onClick={() => setIsOpen(false)}
 									>
-										Sign Out
+										Manager
 									</Link>
 								</li>
 							</ul>
@@ -116,7 +116,7 @@ const Dashboard = () => {
 						<CiCirclePlus className="w-10 h-10 border-none rounded-full bg-purple-500 text-gray-200" />
 					</div>
 				</div>
-				<div className="flex justify-between w-20 items-center">
+				<div className="hidden md:flex justify-between w-20 items-center">
 					<div className="relative group inline-block">
 						<div className="flex items-center justify-center">
 							<svg
