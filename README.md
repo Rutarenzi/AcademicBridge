@@ -4,4 +4,4 @@
 [![Coverage Status](https://coveralls.io/repos/github/Rutarenzi/AcademicBridge/badge.svg)](https://coveralls.io/github/Rutarenzi/AcademicBridge)
 
 VERCEL_TOKEN:etTERuT7XrPrpY8D3WcmH2Qp
-hello
+
