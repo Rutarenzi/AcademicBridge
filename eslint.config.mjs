@@ -39,7 +39,13 @@ export default [
     },
 
   },
-  
+  {
+    "settings": {
+        react: {
+            version: "detect",
+        },
+    },
+  },
   {
     rules: {
       "no-underscore-dangle": "off",
