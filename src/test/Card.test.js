@@ -3,7 +3,6 @@ import { render, screen } from '@testing-library/react';
 import Card from '../components/Card';
 import Photo from '../assets/photo-1.jpg';
 
-
 describe('Card Component', () => {
 	const defaultProps = {
 		status: 'Completed',
@@ -16,7 +15,7 @@ describe('Card Component', () => {
 	});
 
 	it("renders image when status is 'In Progress'", () => {
-		render(<Card status={null} description={defaultProps.description} />); // Updated status
+		render(<Card status={null} description={defaultProps.description} />);
 
 		const img = screen.getByAltText('In Progress');
 		expect(img).toBeInTheDocument();
@@ -36,13 +35,14 @@ describe('Card Component', () => {
 
 	it('displays user avatars', () => {
 		render(<Card status={null} description={defaultProps.description} />);
-		
+
 		const avatars = screen.getAllByRole('img');
 		expect(avatars.length).toBe(1); 
+	});
 
 	it('displays the comment icon and count', () => {
 		render(<Card status={null} description={defaultProps.description} />);
-		
+
 		expect(screen.getByText('6')).toBeInTheDocument(); 
 	});
 });

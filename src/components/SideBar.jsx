@@ -9,7 +9,11 @@ const SideBar = ({ sideBarStatus, toggleSideBar }) => {
 	const [open, setOpen] = useState(true);
 	return (
 		<div
-			className={`${open ? 'w-64' : 'w-20'} ${sideBarStatus ? 'block' : 'hidden'} md:block duration-300 p-5 pt-8 bg-white h-screen border-r border-gray-200 dark:border-gray-500 overflow-hidden absolute sm:relative z-50 dark:bg-gray-800 dark:text-gray-100`}
+			className={`${open ? 'w-64' : 'w-20'} ${sideBarStatus ? 'block' : 'hidden'}
+				 md:block duration-300 p-5 pt-8 bg-white h-screen border-r border-gray-200
+				 dark:bg-gray-800
+				  dark:border-gray-500 overflow-hidden absolute sm:relative z-50 
+				 dark:text-gray-100`}
 		>
 			{sideBarStatus && (
 				<button

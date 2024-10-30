@@ -31,9 +31,6 @@ const DropdownMenu = () => {
 							Completed
 						</a>
 						<a href="#" className="block px-4 py-2 text-sm" role="menuitem">
-							To do
-						</a>
-						<a href="#" className="block px-4 py-2 text-sm" role="menuitem">
 							In progress
 						</a>
 					</div>

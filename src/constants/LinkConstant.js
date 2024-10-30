@@ -53,8 +53,7 @@ const Users = [
 ];
 const cards = Array.from({ length: 20 }, (_, index) => ({
 	id: index + 1,
-	status:
-		index % 5 === 0 ? 'To do' : index % 5 === 1 ? 'In Progress' : 'Completed',
+	status: index % 2 ? 'true' : 'false',
 	image: `${Photo}`,
 }));
 

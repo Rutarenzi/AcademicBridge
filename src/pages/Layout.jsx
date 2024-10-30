@@ -6,7 +6,7 @@ import TopNavbar from '../components/TopBar';
 const Layout = () => {
 	const [sideBarOpen, setSideBarOpen] = useState(false);
 	return (
-		<div className="flex bg-gray-100 relative sm:relative md:static">
+		<div className="flex bg-gray-100  dark:bg-gray-600 relative sm:relative md:static">
 			<SideBar sideBarStatus={sideBarOpen} toggleSideBar={setSideBarOpen} />
 			<div className="flex-1  h-screen overflow-y-auto">
 				<TopNavbar sideBarStatus={sideBarOpen} toggleSideBar={setSideBarOpen} />
