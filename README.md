@@ -2,6 +2,10 @@
 
 Academic Bridge is a React project developed as part of the React Developer Challenge. This project aims to serve as an exemplary industrial application, showcasing best practices in React development.
 
+## Live Demo
+
+Check out the live demo [here](https://academic-bridge-six.vercel.app/).
+
 ## Features
 
 - Built using the latest React technologies
@@ -65,4 +69,9 @@ To get a local copy up and running, follow these steps:
 
 ```
 yarn  run build 
+```
+5.  Run App 
+
+```
+yarn  run start 
 ```
