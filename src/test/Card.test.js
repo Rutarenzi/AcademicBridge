@@ -19,7 +19,7 @@ describe('Card Component', () => {
 
 		const img = screen.getByAltText('In Progress');
 		expect(img).toBeInTheDocument();
-		expect(img).toHaveAttribute('src', Photo); 
+		expect(img).toHaveAttribute('src', Photo);
 	});
 
 	it("does not render image when status is 'Completed'", () => {
@@ -37,12 +37,12 @@ describe('Card Component', () => {
 		render(<Card status={null} description={defaultProps.description} />);
 
 		const avatars = screen.getAllByRole('img');
-		expect(avatars.length).toBe(1); 
+		expect(avatars.length).toBe(1);
 	});
 
 	it('displays the comment icon and count', () => {
 		render(<Card status={null} description={defaultProps.description} />);
 
-		expect(screen.getByText('6')).toBeInTheDocument(); 
+		expect(screen.getByText('6')).toBeInTheDocument();
 	});
 });
